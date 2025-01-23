@@ -32,14 +32,7 @@ public class MaquinaLigadaTest {
 
     @Test
     public void testInserirCreditos() {
-        assertTrue(maquina.inserirCreditos());
-        assertEquals(MaquinaEstadoComCreditos.getInstance(), maquina.getEstado());
-    }
-
-    @Test
-    public void testDespejarCafe() {
-        maquina.inserirCreditos();
-        assertTrue(maquina.despejarCafe());
+        assertFalse(maquina.inserirCreditos());
         assertEquals(MaquinaEstadoLigada.getInstance(), maquina.getEstado());
     }
 
@@ -47,5 +40,11 @@ public class MaquinaLigadaTest {
     public void testSemCreditos(){
         assertFalse(maquina.despejarCafe());
         assertEquals(MaquinaEstadoLigada.getInstance(), maquina.getEstado());
+    }
+
+    @Test
+    public void testColocarCafe(){
+        assertTrue(maquina.colocarCafe());
+        assertEquals(MaquinaEstadoComCafe.getInstance(), maquina.getEstado());
     }
 }

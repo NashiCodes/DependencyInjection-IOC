@@ -25,8 +25,8 @@ public class MaquinaEstadoLigada extends MaquinaEstado {
         return true;
     }
 
-    public boolean comCreditos(Maquina maquina) {
-        maquina.setEstado(MaquinaEstadoComCreditos.getInstance());
+    public boolean colocarCafe(Maquina maquina) {
+        maquina.setEstado(MaquinaEstadoComCafe.getInstance());
         return true;
     }
 }

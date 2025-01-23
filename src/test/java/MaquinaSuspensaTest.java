@@ -26,8 +26,17 @@ public class MaquinaSuspensaTest {
     }
 
     @Test
+    public void testSuspenderMaquinaComCafe() {
+        maquina.ligar();
+        maquina.colocarCafe();
+        assertFalse(maquina.suspender());
+        assertEquals(MaquinaEstadoComCafe.getInstance(), maquina.getEstado());
+    }
+
+    @Test
     public void testSuspenderMaquinaComCreditos() {
         maquina.ligar();
+        maquina.colocarCafe();
         maquina.inserirCreditos();
         assertFalse(maquina.suspender());
         assertEquals(MaquinaEstadoComCreditos.getInstance(), maquina.getEstado());

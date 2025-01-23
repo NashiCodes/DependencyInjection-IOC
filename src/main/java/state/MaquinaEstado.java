@@ -16,6 +16,10 @@ public abstract class MaquinaEstado {
         return false;
     }
 
+    public boolean colocarCafe(Maquina maquina) {
+        return false;
+    }
+
     public boolean comCreditos(Maquina maquina) {
         return false;
     }

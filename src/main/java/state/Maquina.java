@@ -28,6 +28,10 @@ public class Maquina {
         return estado.despejarCafe(this);
     }
 
+    public boolean colocarCafe() {
+        return estado.colocarCafe(this);
+    }
+
     public MaquinaEstado getEstado() {
         return estado;
     }
